@@ -26,8 +26,8 @@ const theCode = `type type = {
     "p",
   );
   console.log(e);`;
+const type = "ts";
 
-const type = "ts"; // optional
+
 const link = await hasteBin(theCode, type); // type is optional
-
 console.log(link);
