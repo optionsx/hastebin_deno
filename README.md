@@ -1,11 +1,7 @@
 # Hastebin for Deno (https://deno.land/x/hastebin)
-why not
-
-### to run an example
 ```bash
 deno run --allow-net https://deno.land/x/hastebin/example.ts
 ```
-
 ### Example code
 ```TS
 import hasteBin from "https://deno.land/x/hastebin/mod.ts";
