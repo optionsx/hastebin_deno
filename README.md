@@ -1,4 +1,4 @@
-# Hastebin for Deno (https://deno.land/x/hastebin)
+# [Hastebin for Deno ](https://deno.land/x/hastebin)
 ```bash
 deno run --allow-net https://deno.land/x/hastebin/example.ts
 ```
