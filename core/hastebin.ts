@@ -2,19 +2,19 @@ import { axios } from "../mod.ts";
 import { randomAcceptLanguage, randomSecChUa } from "../utils/utilz.ts";
 
 /**
- * @param code: the code to upload to hastebin
- * @param type: type of code (js, ts, py, etc)(optional)
+ * @param text: the text to upload
+ * @param extension: js, ts, py, ...(optional)
  * @returns: link to the hastebin
  * @description: Uploads code to hastebin and returns the link
  * @example: await hasteBin("console.log('Hello World!')", "js") // https://hastebin.skyra.pw/xxxxxx.js
  */
 export const hasteBin = async (
-  code: string,
-  type?: string,
+  text: string,
+  extension?: string,
 ): Promise<string> => {
   const { data } = await axios.post(
     "https://hastebin.skyra.pw/documents",
-    code,
+    text,
     {
       headers: {
         accept: "application/json",
@@ -33,5 +33,5 @@ export const hasteBin = async (
       },
     },
   );
-  return `https://hastebin.skyra.pw/${data.key}${type ? `.${type}` : ""}`;
+  return `https://hastebin.skyra.pw/${data.key}${extension ? `.${extension}` : ""}`;
 };
